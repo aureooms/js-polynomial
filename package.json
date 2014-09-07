@@ -1,0 +1,33 @@
+{
+	"bugs": {
+		"url": "https://github.com/aureooms/js-polynomial/issues"
+	},
+	"version": "0.0.0",
+	"name": "aureooms-js-polynomial",
+	"description": "sparse and dense polynomials code bricks for JavaScript",
+	"keywords": [
+		"algebra",
+		"bricks",
+		"javascript",
+		"js",
+		"mathematics",
+		"polynomial"
+	],
+	"dependencies": {},
+	"scripts": {
+		"test": "./node_modules/.bin/aureooms-node-package-test",
+		"doc": "./node_modules/.bin/groc",
+		"build": "./node_modules/.bin/aureooms-node-package-build"
+	},
+	"devDependencies": {
+		"aureooms-node-package": "^0.3.2"
+	},
+	"main": "js/dist/polynomial.js",
+	"author": "aureooms",
+	"homepage": "http://aureooms.github.io/js-polynomial/",
+	"repository": {
+		"url": "https://github.com/aureooms/js-polynomial.git",
+		"type": "git"
+	},
+	"license": "AGPL v3"
+}
