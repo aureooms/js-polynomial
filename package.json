@@ -20,7 +20,7 @@
 		"build": "./node_modules/.bin/aureooms-node-package-build"
 	},
 	"devDependencies": {
-		"aureooms-node-package": "^0.3.2"
+		"aureooms-node-package": "^1.0.0"
 	},
 	"main": "js/dist/polynomial.js",
 	"author": "aureooms",
@@ -29,5 +29,5 @@
 		"url": "https://github.com/aureooms/js-polynomial.git",
 		"type": "git"
 	},
-	"license": "AGPL v3"
+	"license": "AGPL-3.0"
 }
