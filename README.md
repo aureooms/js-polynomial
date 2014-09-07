@@ -8,3 +8,4 @@ sparse and dense polynomials code bricks for JavaScript
 [![Dependencies Status](https://david-dm.org/aureooms/js-polynomial.png)](https://david-dm.org/aureooms/js-polynomial#info=dependencies)
 [![devDependencies Status](https://david-dm.org/aureooms/js-polynomial/dev-status.png)](https://david-dm.org/aureooms/js-polynomial#info=devDependencies)
 [![Code Climate](https://codeclimate.com/github/aureooms/js-polynomial.png)](https://codeclimate.com/github/aureooms/js-polynomial)
+
