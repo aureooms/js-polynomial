@@ -9,3 +9,7 @@ sparse and dense polynomials code bricks for JavaScript
 [![devDependencies Status](https://david-dm.org/aureooms/js-polynomial/dev-status.png)](https://david-dm.org/aureooms/js-polynomial#info=devDependencies)
 [![Code Climate](https://codeclimate.com/github/aureooms/js-polynomial.png)](https://codeclimate.com/github/aureooms/js-polynomial)
 
+references:
+
+ - [The GNU Multiple Precision Arithmetic Library](https://gmplib.org/)
+ - https://gmplib.org/gmp-man-6.0.0a.pdf
