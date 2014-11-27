@@ -10,11 +10,11 @@
  * @return {function} polynomial evaluation function
  */
 
-var __evaluate__ = function ( mov, imov, add, mul, imul ) {
+var __evaluate__ = function ( mov , imov , add , mul , imul ) {
 
 
 	/**
-	 * Evaluates little endian polynomial [i, j[ for x.
+	 * Evaluates little endian polynomial [i , j[ for x.
 	 *
 	 * @param  {const polynomial}  p the polynomial to evaluate
 	 * @param  {index} i             left index of polynomial
@@ -24,29 +24,29 @@ var __evaluate__ = function ( mov, imov, add, mul, imul ) {
 	 * @return {number}              param y
 	 */
 
-	var evaluate = function ( p, i, j, x, y ) {
+	var evaluate = function ( p , i , j , x , y ) {
 
-		var X;
+		var X ;
 
 		if ( i < j ) {
 
-			y = imov( y, p[i] );
+			y = imov( y , p[i] ) ;
 
-			++i;
+			++i ;
 
 			if ( i < j ) {
 
-				// X = x^k, for k in [0, j - i[
+				// X = x^k , for k in [0 , j - i[
 
-				X = mov( x );
+				X = mov( x ) ;
 
-				y = iadd( y, mul( X, p[i] ) );
+				y = iadd( y , mul( X , p[i] ) ) ;
 
 				for ( ++i ; i < j ; ++i ) {
 
-					X = imul( X, x );
+					X = imul( X , x ) ;
 
-					y = iadd( y, mul( X, p[i] ) );
+					y = iadd( y , mul( X , p[i] ) ) ;
 
 				}
 
@@ -54,12 +54,12 @@ var __evaluate__ = function ( mov, imov, add, mul, imul ) {
 
 		}
 
-		return y;
+		return y ;
 
-	};
+	} ;
 
-	return evaluate;
+	return evaluate ;
 
-};
+} ;
 
-exports.__evaluate__ = __evaluate__;
+exports.__evaluate__ = __evaluate__ ;

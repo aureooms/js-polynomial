@@ -9,11 +9,11 @@
 * @return {function} polynomial evaluation function
 */
 
-var __horner__ = function ( mov, imov, add, mul, imul ) {
+var __horner__ = function ( mov , imov , add , mul , imul ) {
 
 
 	/**
-	* Evaluates little endian polynomial [i, j[ for x
+	* Evaluates little endian polynomial [i , j[ for x
 	* using Horner's algorithm.
 	*
 	* @param  {const polynomial}  p the polynomial to evaluate
@@ -24,30 +24,30 @@ var __horner__ = function ( mov, imov, add, mul, imul ) {
 	* @return {number}              param y
 	*/
 
-	var horner = function ( p, i, j, x, y ) {
+	var horner = function ( p , i , j , x , y ) {
 
 		if ( i < j ) {
 
-			--j;
+			--j ;
 
-			y = imov( y, p[j] );
+			y = imov( y , p[j] ) ;
 
-			for ( ; i < j ; ) {
+			while ( i < j ) {
 
-				--j;
+				--j ;
 
-				y = iadd( imul( y, x ), p[j] );
+				y = iadd( imul( y , x ) , p[j] ) ;
 
 			}
 
 		}
 
-		return y;
+		return y ;
 
-	};
+	} ;
 
-	return horner;
+	return horner ;
 
-};
+} ;
 
-exports.__horner__ = __horner__;
+exports.__horner__ = __horner__ ;
