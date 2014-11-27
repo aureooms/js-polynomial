@@ -2,7 +2,7 @@
 
 /**
  * little endian
- * hypothesis : rj - ri >= m + n
+ * hypothesis : rj - ri >= m + n - 1
  * @param  {number iadd} niadd number type in-place addition function
  * @param  {number mul} niadd number type multiplication function
  */
@@ -19,7 +19,7 @@ var __mul__ = function ( niadd , nmul ) {
 
 				k = ri + i + j ;
 
-				r[k] = niadd( r[k] , nmul( p[pi + i] , q[qj + j] ) ) ;
+				r[k] = niadd( r[k] , nmul( p[pi + i] , q[qi + j] ) ) ;
 
 			}
 
