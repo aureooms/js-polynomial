@@ -1,6 +1,6 @@
 {
 	"description": "sparse and dense polynomials code bricks for JavaScript",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"repo": "aureooms/js-polynomial",
 	"scripts": [
 		"js/dist/polynomial.js"

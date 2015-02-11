@@ -1,6 +1,6 @@
 {
 	"main": "js/dist/polynomial.js",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"homepage": "http://aureooms.github.io/js-polynomial/",
 	"name": "aureooms-js-polynomial",
 	"description": "sparse and dense polynomials code bricks for JavaScript",
