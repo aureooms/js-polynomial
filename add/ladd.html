@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="en"><head><title>add/ladd</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="add/ladd"><meta name="groc-project-path" content="js/src/add/ladd.js"><meta name="groc-github-url" content="https://github.com/aureooms/js-polynomial"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-polynomial/blob/master/js/src/add/ladd.js">js/src/add/ladd.js</a></div></div><div id="document"><div class="segment"></div><div class="segment"><div class="comments doc-section"><div class="wrapper"><p>little endian
+hypothesis : rj - ri &gt;= pj - pi &gt;= qj - pi</p>
+<p>Parameters:</p>
+<ul>
+<li><strong>nadd must be a number add.</strong><br/>(number type addition function)</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">var</span> __ladd__ = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">( nadd , copy )</span> {</span>
+
+	<span class="hljs-keyword">var</span> ladd = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">( p , pi , pj , q , qi , qj , r , ri , rj )</span> {</span>
+
+		<span class="hljs-keyword">for</span> ( ; qi &lt; qj ; ++qi , ++pi , ++ri ) {
+
+			r[ri] = nadd( p[pi] , q[qi] ) ;
+
+		}
+
+		<span class="hljs-keyword">for</span> ( ; pi &lt; pj ; ++pi , ++ri ) {
+
+			r[ri] = copy( p[pi] ) ;
+
+		}
+
+	} ;
+
+	<span class="hljs-keyword">return</span> ladd ;
+
+} ;
+
+exports.__ladd__ = __ladd__ ;</div></div></div></div></body></html>

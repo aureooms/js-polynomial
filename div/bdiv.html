@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en"><head><title>div/bdiv</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="div/bdiv"><meta name="groc-project-path" content="js/src/div/bdiv.js"><meta name="groc-github-url" content="https://github.com/aureooms/js-polynomial"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-polynomial/blob/master/js/src/div/bdiv.js">js/src/div/bdiv.js</a></div></div><div id="document"><div class="segment"></div><div class="segment"><div class="comments doc-section"><div class="wrapper"><p>Parameters:</p>
+<ul>
+<li><p><strong>iszero must be a number function.</strong><br/>(checks if a number is 0)</p>
+</li>
+<li><p><strong>iadd must be a number function.</strong><br/>(adds two numbers in place)</p>
+</li>
+<li><p><strong>isubmul must be a number function.</strong><br/>(subtracts the multiple of a number to a number in place)</p>
+</li>
+<li><p><strong>izero must be a number function.</strong><br/>(zero number constructor, in place (to allow recycling))</p>
+</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">var</span> _bdiv = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">( iszero , iadd , isubmul , izero )</span> {</span></div></div></div><div class="segment"><div class="comments doc-section"><div class="wrapper"><p>Big endian dense polynomial division.</p>
+<p>Parameters:</p>
+<ul>
+<li><p><strong>b must be a dense polynomial array.</strong><br/>(divisor, normalized)</p>
+</li>
+<li><p><strong>bi must be a dense polynomial array begin.</strong></p>
+</li>
+<li><p><strong>bj must be a dense polynomial array end.</strong></p>
+</li>
+<li><p><strong>q must be a dense polynomial array.</strong><br/>(quotient, initialized to zero)</p>
+</li>
+<li><p><strong>qi must be a dense polynomial array begin.</strong></p>
+</li>
+<li><p><strong>qj must be a dense polynomial array end.</strong></p>
+</li>
+<li><p><strong>r must be a dense polynomial array.</strong><br/>(remainder, initialized to dividend)</p>
+</li>
+<li><p><strong>ri must be a dense polynomial array begin.</strong></p>
+</li>
+<li><p><strong>rj must be a dense polynomial array end.</strong></p>
+</li>
+</ul></div></div><div class="code"><div class="wrapper">	<span class="hljs-keyword">var</span> bdiv = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">( b , bi , bj , q , qi , qj , r , ri , rj )</span> {</span>
+
+		<span class="hljs-keyword">var</span> m , n , c , y ;
+
+		m = rj - ri ;
+		n = bj - bi ;
+
+		<span class="hljs-keyword">for</span> ( ; m &gt;= n ; ++ri , --m ) {
+
+			<span class="hljs-keyword">if</span> ( iszero( r[ri] ) ) {
+				++ri ;
+				--m ;
+				<span class="hljs-keyword">continue</span> ;
+			}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>b fits r[ri] times in r
+we add r[ri] * x^(m-n) to q</p></div></div><div class="code"><div class="wrapper">			q[qj-m+n] = iadd( q[qj-m+n] , r[ri] ) ;
+
+			<span class="hljs-keyword">for</span> ( i = <span class="hljs-number">1</span> ; i &lt; n ; ++i ) {
+				r[ri+i] = isubmul( r[ri+i] , b[bi+i] , r[ri] ) ;
+			}</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>leading coefficient set to zero</p></div></div><div class="code"><div class="wrapper">			r[ri] = izero( r[ri] ) ;
+
+		}
+
+	} ;
+
+} ;</div></div></div></div></body></html>
