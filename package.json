@@ -2,7 +2,7 @@
 	"bugs": {
 		"url": "https://github.com/aureooms/js-polynomial/issues"
 	},
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"name": "aureooms-js-polynomial",
 	"description": "sparse and dense polynomials code bricks for JavaScript",
 	"keywords": [
