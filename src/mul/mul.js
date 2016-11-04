@@ -3,8 +3,8 @@
 /**
  * little endian
  * hypothesis : rj - ri >= m + n - 1
- * @param  {number iadd} niadd number type in-place addition function
- * @param  {number mul} niadd number type multiplication function
+ * @param {function} niadd number type in-place addition function
+ * @param {function} nmul number type multiplication function
  */
 
 export function __mul__ ( niadd , nmul ) {
