@@ -1,33 +1,28 @@
+import test from 'ava' ;
 
+import array from "aureooms-js-array" ;
+import number from "aureooms-js-number" ;
+import functools from "aureooms-js-functools" ;
+import itertools from "aureooms-js-itertools" ;
 
-var array , number , functools , itertools ;
+import { __mul__ } from "../../src" ;
 
-array = require( "aureooms-js-array" );
-number = require( "aureooms-js-number" );
-functools = require( "aureooms-js-functools" );
-itertools = require( "aureooms-js-itertools" );
+test( "mul" , t => {
 
+	const mul = __mul__( number.iadd , number.mul ) ;
 
-test( "mul" , function ( ) {
+	const run = function ( p , q , expected ) {
 
-	var run , mul ;
+		const m = p.length ;
+		const n = q.length ;
 
-	mul = polynomial.__mul__( number.iadd , number.mul ) ;
-
-	run = function ( p , q , expected ) {
-
-		var m , n , r ;
-
-		m = p.length ;
-		n = q.length ;
-
-		r = array.alloc( m + n - 1 ) ;
+		const r = array.alloc( m + n - 1 ) ;
 
 		array.fill( r , 0 , m + n - 1 , 0 ) ;
 
 		mul( p , 0 , m , q , 0 , n , r , 0 , m + n - 1 ) ;
 
-		deepEqual( r , expected , JSON.stringify( p ) + " * " + JSON.stringify( q ) ) ;
+		t.deepEqual( r , expected , JSON.stringify( p ) + " * " + JSON.stringify( q ) ) ;
 
 	} ;
 

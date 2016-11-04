@@ -7,9 +7,9 @@
  * @param  {number mul} niadd number type multiplication function
  */
 
-var __mul__ = function ( niadd , nmul ) {
+export function __mul__ ( niadd , nmul ) {
 
-	var mul = function ( p , pi , pj , q , qi , qj , r , ri , rj ) {
+	const mul = function ( p , pi , pj , q , qi , qj , r , ri , rj ) {
 
 		var i , j , k , m , n ;
 
@@ -29,6 +29,4 @@ var __mul__ = function ( niadd , nmul ) {
 
 	return mul ;
 
-} ;
-
-exports.__mul__ = __mul__ ;
+}

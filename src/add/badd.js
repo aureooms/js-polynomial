@@ -4,9 +4,9 @@
 * hypothesis : rj - ri >= pj - pi >= qj - pi
 * @param {number add} nadd number type addition function
 */
-var __badd__ = function ( nadd , copy ) {
+export function __badd__ ( nadd , copy ) {
 
-	var badd = function ( p , pi , pj , q , qi , qj , r , ri , rj ) {
+	const badd = function ( p , pi , pj , q , qi , qj , r , ri , rj ) {
 
 		while ( qj > qi ) {
 
@@ -31,6 +31,4 @@ var __badd__ = function ( nadd , copy ) {
 
 	return badd ;
 
-} ;
-
-exports.__badd__ = __badd__ ;
+}

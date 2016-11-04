@@ -3,10 +3,11 @@
  * little endian
  * hypothesis : rj - ri >= pj - pi >= qj - pi
  * @param {number add} nadd number type addition function
+ * @param {function} copy number type copy function
  */
-var __ladd__ = function ( nadd , copy ) {
+export function __ladd__ ( nadd , copy ) {
 
-	var ladd = function ( p , pi , pj , q , qi , qj , r , ri , rj ) {
+	const ladd = function ( p , pi , pj , q , qi , qj , r , ri , rj ) {
 
 		for ( ; qi < qj ; ++qi , ++pi , ++ri ) {
 
@@ -25,5 +26,3 @@ var __ladd__ = function ( nadd , copy ) {
 	return ladd ;
 
 } ;
-
-exports.__ladd__ = __ladd__ ;

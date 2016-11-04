@@ -6,7 +6,7 @@
  * @param {number function} izero zero number constructor, in place (to allow recycling)
  */
 
-var _bdiv = function ( iszero , iadd , isubmul , izero ) {
+export function _bdiv ( iszero , iadd , isubmul , izero ) {
 
 	/**
 	 * Big endian dense polynomial division.
@@ -22,7 +22,7 @@ var _bdiv = function ( iszero , iadd , isubmul , izero ) {
 	 * @param {dense polynomial array end} rj
 	 */
 
-	var bdiv = function ( b , bi , bj , q , qi , qj , r , ri , rj ) {
+	const bdiv = function ( b , bi , bj , q , qi , qj , r , ri , rj ) {
 
 		var m , n , c , y ;
 
@@ -54,4 +54,4 @@ var _bdiv = function ( iszero , iadd , isubmul , izero ) {
 
 	} ;
 
-} ;
+}

@@ -9,7 +9,7 @@
 * @return {function} polynomial evaluation function
 */
 
-var __horner__ = function ( mov , imov , add , mul , imul ) {
+export function __horner__ ( imov , iadd , imul ) {
 
 
 	/**
@@ -48,6 +48,4 @@ var __horner__ = function ( mov , imov , add , mul , imul ) {
 
 	return horner ;
 
-} ;
-
-exports.__horner__ = __horner__ ;
+}

@@ -10,8 +10,7 @@
  * @return {function} polynomial evaluation function
  */
 
-var __evaluate__ = function ( mov , imov , add , mul , imul ) {
-
+export function __evaluate__ ( mov , imov , iadd , mul , imul ) {
 
 	/**
 	 * Evaluates little endian polynomial [i , j[ for x.
@@ -60,6 +59,4 @@ var __evaluate__ = function ( mov , imov , add , mul , imul ) {
 
 	return evaluate ;
 
-} ;
-
-exports.__evaluate__ = __evaluate__ ;
+}

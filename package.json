@@ -1,37 +1,60 @@
 {
-	"bugs": {
-		"url": "https://github.com/aureooms/js-polynomial/issues"
-	},
-	"version": "0.0.6",
-	"name": "aureooms-js-polynomial",
-	"description": "sparse and dense polynomials code bricks for JavaScript",
-	"keywords": [
-		"algebra",
-		"bricks",
-		"javascript",
-		"js",
-		"mathematics",
-		"polynomial"
-	],
-	"dependencies": {},
-	"scripts": {
-		"test": "./node_modules/.bin/aureooms-node-package-test",
-		"doc": "./node_modules/.bin/groc",
-		"build": "./node_modules/.bin/aureooms-node-package-build"
-	},
-	"devDependencies": {
-		"aureooms-node-package": "^1.1.3",
-		"aureooms-js-functools": "^1.0.0",
-		"aureooms-js-itertools": "^0.2.0",
-		"aureooms-js-number": "^3.0.0",
-		"aureooms-js-array": "^1.1.0"
-	},
-	"main": "js/dist/polynomial.js",
-	"author": "aureooms",
-	"homepage": "http://aureooms.github.io/js-polynomial/",
-	"repository": {
-		"url": "https://github.com/aureooms/js-polynomial.git",
-		"type": "git"
-	},
-	"license": "AGPL-3.0"
+  "name": "aureooms-js-polynomial",
+  "description": "Sparse and dense polynomials for JavaScript",
+  "version": "0.0.6",
+  "author": "Aurélien Ooms <aurelien.ooms@gmail.com>",
+  "ava": {
+    "require": [
+      "babel-polyfill",
+      "babel-register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ],
+    "env": {
+      "development": {
+        "sourceMaps": "inline"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/aureooms/js-polynomial/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "aureooms-js-array": "^3.1.0",
+    "aureooms-js-functools": "^2.0.3",
+    "aureooms-js-itertools": "^1.3.0",
+    "aureooms-js-number": "^2.1.0",
+    "ava": "^0.16.0",
+    "babel-cli": "^6.18.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "codeclimate-test-reporter": "^0.4.0",
+    "coveralls": "^2.11.14",
+    "esdoc": "^0.4.8",
+    "nyc": "^8.4.0"
+  },
+  "homepage": "http://aureooms.github.io/js-polynomial",
+  "keywords": [
+    "algebra",
+    "javascript",
+    "js",
+    "mathematics",
+    "polynomial"
+  ],
+  "license": "AGPL-3.0",
+  "main": "lib/index.js",
+  "repository": {
+    "url": "https://github.com/aureooms/js-polynomial.git",
+    "type": "git"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "cover": "nyc --reporter=lcov npm test",
+    "prepublish": "npm run build",
+    "test": "ava ./test/src --concurrency 8"
+  }
 }
