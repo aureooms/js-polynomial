@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl">
-  <title data-ice="title">aureooms/js-polynomial API Document</title>
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/add/badd.js | aureooms/js-polynomial API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -46,23 +46,43 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="-js-polynomial-http-aureooms-github-io-js-polynomial-"><a href="http://aureooms.github.io/js-polynomial">js-polynomial</a></h1>
-<p>Sparse and dense polynomials for JavaScript.</p>
-<p><a href="https://raw.githubusercontent.com/aureooms/js-polynomial/master/LICENSE"><img src="http://img.shields.io/npm/l/aureooms-js-polynomial.svg?style=flat" alt="NPM license"></a>
-<a href="https://www.npmjs.org/package/aureooms-js-polynomial"><img src="http://img.shields.io/npm/v/aureooms-js-polynomial.svg?style=flat" alt="NPM version"></a>
-<a href="https://travis-ci.org/aureooms/js-polynomial"><img src="http://img.shields.io/travis/aureooms/js-polynomial.svg?style=flat" alt="Build Status"></a>
-<a href="https://coveralls.io/r/aureooms/js-polynomial"><img src="http://img.shields.io/coveralls/aureooms/js-polynomial.svg?style=flat" alt="Coverage Status"></a>
-<a href="https://david-dm.org/aureooms/js-polynomial#info=dependencies"><img src="http://img.shields.io/david/aureooms/js-polynomial.svg?style=flat" alt="Dependencies Status"></a>
-<a href="https://david-dm.org/aureooms/js-polynomial#info=devDependencies"><img src="http://img.shields.io/david/dev/aureooms/js-polynomial.svg?style=flat" alt="devDependencies Status"></a>
-<a href="https://codeclimate.com/github/aureooms/js-polynomial"><img src="http://img.shields.io/codeclimate/github/aureooms/js-polynomial.svg?style=flat" alt="Code Climate"></a>
-<a href="https://www.npmjs.org/package/aureooms-js-polynomial"><img src="http://img.shields.io/npm/dm/aureooms-js-polynomial.svg?style=flat" alt="NPM downloads per month"></a>
-<a href="https://github.com/aureooms/js-polynomial/issues"><img src="http://img.shields.io/github/issues/aureooms/js-polynomial.svg?style=flat" alt="GitHub issues"></a>
-<a href="https://aureooms.github.io/js-polynomial/source.html"><img src="https://aureooms.github.io/js-polynomial/badge.svg" alt="Documentation"></a></p>
-<h2 id="references">References</h2>
-<ul>
-<li><a href="https://gmplib.org">The GNU Multiple Precision Arithmetic Library</a> (<a href="https://gmplib.org/gmp-man-6.0.0a.pdf">manual</a>)</li>
-</ul>
-</div>
+<div class="content" data-ice="content"><h1 data-ice="title">src/add/badd.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
+/**
+* big endian
+* hypothesis : rj - ri &gt;= pj - pi &gt;= qj - pi
+* @param {number add} nadd number type addition function
+*/
+export function __badd__ ( nadd , copy ) {
+
+	const badd = function ( p , pi , pj , q , qi , qj , r , ri , rj ) {
+
+		while ( qj &gt; qi ) {
+
+			--qj;
+			--pj;
+			--rj;
+
+			r[rj] = nadd( p[pj] , q[qj] ) ;
+
+		}
+
+		while ( pj &gt; pi ) {
+
+			--pj;
+			--rj;
+
+			r[rj] = copy( p[pj] ) ;
+
+		}
+
+	} ;
+
+	return badd ;
+
+}
+</code></pre>
+
 </div>
 
 <footer class="footer">
