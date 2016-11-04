@@ -1,13 +1,14 @@
 import test from 'ava' ;
 
 import array from "aureooms-js-array" ;
-import number from "aureooms-js-number" ;
-import functools from "aureooms-js-functools" ;
-import itertools from "aureooms-js-itertools" ;
+import * as number from "aureooms-js-number" ;
+import { partial } from "aureooms-js-functools" ;
+import { exhaust , starmap } from "aureooms-js-itertools" ;
 
-import { __mul__ } from "../../src" ;
+import { __mul__ } from "../../../src" ;
 
 test( "mul" , t => {
+
 
 	const mul = __mul__( number.iadd , number.mul ) ;
 
@@ -26,39 +27,39 @@ test( "mul" , t => {
 
 	} ;
 
-	itertools.product( [
+	const inputs = [
 		[
-			[
-				[ 0 ] ,
-				[ 0 ] ,
-				[ 0 ]
-			] ,
-			[
-				[ 2 ] ,
-				[ 7 ] ,
-				[ 14 ]
-			] ,
-			[
-				[ 2 , 3 ] ,
-				[ 8 , 1 ] ,
-				[ 16 , 26 , 3 ]
-			] ,
-			[
-				[ 8 , 1 ] ,
-				[ 2 , 3 ] ,
-				[ 16 , 26 , 3 ]
-			],
-			[
-				[ 8 , 1 , 2 ] ,
-				[ 2 , 3 ] ,
-				[ 16 , 26 , 7 , 6 ]
-			],
-			[
-				[ 2 , 3 ] ,
-				[ 8 , 1 , 2 ] ,
-				[ 16 , 26 , 7 , 6 ]
-			]
+			[ 0 ] ,
+			[ 0 ] ,
+			[ 0 ]
+		] ,
+		[
+			[ 2 ] ,
+			[ 7 ] ,
+			[ 14 ]
+		] ,
+		[
+			[ 2 , 3 ] ,
+			[ 8 , 1 ] ,
+			[ 16 , 26 , 3 ]
+		] ,
+		[
+			[ 8 , 1 ] ,
+			[ 2 , 3 ] ,
+			[ 16 , 26 , 3 ]
+		],
+		[
+			[ 8 , 1 , 2 ] ,
+			[ 2 , 3 ] ,
+			[ 16 , 26 , 7 , 6 ]
+		],
+		[
+			[ 2 , 3 ] ,
+			[ 8 , 1 , 2 ] ,
+			[ 16 , 26 , 7 , 6 ]
 		]
-	] , 1 , [] ).forEach( functools.partial( functools.star , run ) ) ;
+	] ;
+
+	exhaust( partial( starmap , [ run ] )( inputs ) ) ;
 
 } ) ;
