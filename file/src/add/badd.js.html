@@ -49,10 +49,11 @@
 <div class="content" data-ice="content"><h1 data-ice="title">src/add/badd.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
 /**
-* big endian
-* hypothesis : rj - ri &gt;= pj - pi &gt;= qj - pi
-* @param {number add} nadd number type addition function
-*/
+ * big endian
+ * hypothesis : rj - ri &gt;= pj - pi &gt;= qj - pi
+ * @param {function} nadd number type addition function
+ * @param {function} copy number type copy function
+ */
 export function __badd__ ( nadd , copy ) {
 
 	const badd = function ( p , pi , pj , q , qi , qj , r , ri , rj ) {

@@ -9,8 +9,8 @@
           "type": "Identifier",
           "name": "__ladd__",
           "range": [
-            198,
-            206
+            196,
+            204
           ],
           "loc": {
             "start": {
@@ -28,8 +28,8 @@
             "type": "Identifier",
             "name": "nadd",
             "range": [
-              209,
-              213
+              207,
+              211
             ],
             "loc": {
               "start": {
@@ -46,8 +46,8 @@
             "type": "Identifier",
             "name": "copy",
             "range": [
-              216,
-              220
+              214,
+              218
             ],
             "loc": {
               "start": {
@@ -73,8 +73,8 @@
                     "type": "Identifier",
                     "name": "ladd",
                     "range": [
-                      233,
-                      237
+                      231,
+                      235
                     ],
                     "loc": {
                       "start": {
@@ -95,8 +95,8 @@
                         "type": "Identifier",
                         "name": "p",
                         "range": [
-                          251,
-                          252
+                          249,
+                          250
                         ],
                         "loc": {
                           "start": {
@@ -113,8 +113,8 @@
                         "type": "Identifier",
                         "name": "pi",
                         "range": [
-                          255,
-                          257
+                          253,
+                          255
                         ],
                         "loc": {
                           "start": {
@@ -131,8 +131,8 @@
                         "type": "Identifier",
                         "name": "pj",
                         "range": [
-                          260,
-                          262
+                          258,
+                          260
                         ],
                         "loc": {
                           "start": {
@@ -149,8 +149,8 @@
                         "type": "Identifier",
                         "name": "q",
                         "range": [
-                          265,
-                          266
+                          263,
+                          264
                         ],
                         "loc": {
                           "start": {
@@ -167,8 +167,8 @@
                         "type": "Identifier",
                         "name": "qi",
                         "range": [
-                          269,
-                          271
+                          267,
+                          269
                         ],
                         "loc": {
                           "start": {
@@ -185,8 +185,8 @@
                         "type": "Identifier",
                         "name": "qj",
                         "range": [
-                          274,
-                          276
+                          272,
+                          274
                         ],
                         "loc": {
                           "start": {
@@ -203,8 +203,8 @@
                         "type": "Identifier",
                         "name": "r",
                         "range": [
-                          279,
-                          280
+                          277,
+                          278
                         ],
                         "loc": {
                           "start": {
@@ -221,8 +221,8 @@
                         "type": "Identifier",
                         "name": "ri",
                         "range": [
-                          283,
-                          285
+                          281,
+                          283
                         ],
                         "loc": {
                           "start": {
@@ -239,8 +239,8 @@
                         "type": "Identifier",
                         "name": "rj",
                         "range": [
-                          288,
-                          290
+                          286,
+                          288
                         ],
                         "loc": {
                           "start": {
@@ -267,8 +267,8 @@
                               "type": "Identifier",
                               "name": "qi",
                               "range": [
-                                306,
-                                308
+                                304,
+                                306
                               ],
                               "loc": {
                                 "start": {
@@ -285,8 +285,8 @@
                               "type": "Identifier",
                               "name": "qj",
                               "range": [
-                                311,
-                                313
+                                309,
+                                311
                               ],
                               "loc": {
                                 "start": {
@@ -300,8 +300,8 @@
                               }
                             },
                             "range": [
-                              306,
-                              313
+                              304,
+                              311
                             ],
                             "loc": {
                               "start": {
@@ -324,8 +324,8 @@
                                   "type": "Identifier",
                                   "name": "qi",
                                   "range": [
-                                    318,
-                                    320
+                                    316,
+                                    318
                                   ],
                                   "loc": {
                                     "start": {
@@ -340,8 +340,8 @@
                                 },
                                 "prefix": true,
                                 "range": [
-                                  316,
-                                  320
+                                  314,
+                                  318
                                 ],
                                 "loc": {
                                   "start": {
@@ -361,8 +361,8 @@
                                   "type": "Identifier",
                                   "name": "pi",
                                   "range": [
-                                    325,
-                                    327
+                                    323,
+                                    325
                                   ],
                                   "loc": {
                                     "start": {
@@ -377,8 +377,8 @@
                                 },
                                 "prefix": true,
                                 "range": [
-                                  323,
-                                  327
+                                  321,
+                                  325
                                 ],
                                 "loc": {
                                   "start": {
@@ -398,8 +398,8 @@
                                   "type": "Identifier",
                                   "name": "ri",
                                   "range": [
-                                    332,
-                                    334
+                                    330,
+                                    332
                                   ],
                                   "loc": {
                                     "start": {
@@ -414,8 +414,8 @@
                                 },
                                 "prefix": true,
                                 "range": [
-                                  330,
-                                  334
+                                  328,
+                                  332
                                 ],
                                 "loc": {
                                   "start": {
@@ -430,8 +430,8 @@
                               }
                             ],
                             "range": [
-                              316,
-                              334
+                              314,
+                              332
                             ],
                             "loc": {
                               "start": {
@@ -459,8 +459,8 @@
                                       "type": "Identifier",
                                       "name": "r",
                                       "range": [
-                                        343,
-                                        344
+                                        341,
+                                        342
                                       ],
                                       "loc": {
                                         "start": {
@@ -477,8 +477,8 @@
                                       "type": "Identifier",
                                       "name": "ri",
                                       "range": [
-                                        345,
-                                        347
+                                        343,
+                                        345
                                       ],
                                       "loc": {
                                         "start": {
@@ -492,8 +492,8 @@
                                       }
                                     },
                                     "range": [
-                                      343,
-                                      348
+                                      341,
+                                      346
                                     ],
                                     "loc": {
                                       "start": {
@@ -512,8 +512,8 @@
                                       "type": "Identifier",
                                       "name": "nadd",
                                       "range": [
-                                        351,
-                                        355
+                                        349,
+                                        353
                                       ],
                                       "loc": {
                                         "start": {
@@ -534,8 +534,8 @@
                                           "type": "Identifier",
                                           "name": "p",
                                           "range": [
-                                            357,
-                                            358
+                                            355,
+                                            356
                                           ],
                                           "loc": {
                                             "start": {
@@ -552,8 +552,8 @@
                                           "type": "Identifier",
                                           "name": "pi",
                                           "range": [
-                                            359,
-                                            361
+                                            357,
+                                            359
                                           ],
                                           "loc": {
                                             "start": {
@@ -567,8 +567,8 @@
                                           }
                                         },
                                         "range": [
-                                          357,
-                                          362
+                                          355,
+                                          360
                                         ],
                                         "loc": {
                                           "start": {
@@ -588,8 +588,8 @@
                                           "type": "Identifier",
                                           "name": "q",
                                           "range": [
-                                            365,
-                                            366
+                                            363,
+                                            364
                                           ],
                                           "loc": {
                                             "start": {
@@ -606,8 +606,8 @@
                                           "type": "Identifier",
                                           "name": "qi",
                                           "range": [
-                                            367,
-                                            369
+                                            365,
+                                            367
                                           ],
                                           "loc": {
                                             "start": {
@@ -621,8 +621,8 @@
                                           }
                                         },
                                         "range": [
-                                          365,
-                                          370
+                                          363,
+                                          368
                                         ],
                                         "loc": {
                                           "start": {
@@ -637,8 +637,8 @@
                                       }
                                     ],
                                     "range": [
-                                      351,
-                                      372
+                                      349,
+                                      370
                                     ],
                                     "loc": {
                                       "start": {
@@ -652,8 +652,8 @@
                                     }
                                   },
                                   "range": [
-                                    343,
-                                    372
+                                    341,
+                                    370
                                   ],
                                   "loc": {
                                     "start": {
@@ -667,8 +667,8 @@
                                   }
                                 },
                                 "range": [
-                                  343,
-                                  374
+                                  341,
+                                  372
                                 ],
                                 "loc": {
                                   "start": {
@@ -683,8 +683,8 @@
                               }
                             ],
                             "range": [
-                              337,
-                              379
+                              335,
+                              377
                             ],
                             "loc": {
                               "start": {
@@ -698,8 +698,8 @@
                             }
                           },
                           "range": [
-                            298,
-                            379
+                            296,
+                            377
                           ],
                           "loc": {
                             "start": {
@@ -722,8 +722,8 @@
                               "type": "Identifier",
                               "name": "pi",
                               "range": [
-                                391,
-                                393
+                                389,
+                                391
                               ],
                               "loc": {
                                 "start": {
@@ -740,8 +740,8 @@
                               "type": "Identifier",
                               "name": "pj",
                               "range": [
-                                396,
-                                398
+                                394,
+                                396
                               ],
                               "loc": {
                                 "start": {
@@ -755,8 +755,8 @@
                               }
                             },
                             "range": [
-                              391,
-                              398
+                              389,
+                              396
                             ],
                             "loc": {
                               "start": {
@@ -779,8 +779,8 @@
                                   "type": "Identifier",
                                   "name": "pi",
                                   "range": [
-                                    403,
-                                    405
+                                    401,
+                                    403
                                   ],
                                   "loc": {
                                     "start": {
@@ -795,8 +795,8 @@
                                 },
                                 "prefix": true,
                                 "range": [
-                                  401,
-                                  405
+                                  399,
+                                  403
                                 ],
                                 "loc": {
                                   "start": {
@@ -816,8 +816,8 @@
                                   "type": "Identifier",
                                   "name": "ri",
                                   "range": [
-                                    410,
-                                    412
+                                    408,
+                                    410
                                   ],
                                   "loc": {
                                     "start": {
@@ -832,8 +832,8 @@
                                 },
                                 "prefix": true,
                                 "range": [
-                                  408,
-                                  412
+                                  406,
+                                  410
                                 ],
                                 "loc": {
                                   "start": {
@@ -848,8 +848,8 @@
                               }
                             ],
                             "range": [
-                              401,
-                              412
+                              399,
+                              410
                             ],
                             "loc": {
                               "start": {
@@ -877,8 +877,8 @@
                                       "type": "Identifier",
                                       "name": "r",
                                       "range": [
-                                        421,
-                                        422
+                                        419,
+                                        420
                                       ],
                                       "loc": {
                                         "start": {
@@ -895,8 +895,8 @@
                                       "type": "Identifier",
                                       "name": "ri",
                                       "range": [
-                                        423,
-                                        425
+                                        421,
+                                        423
                                       ],
                                       "loc": {
                                         "start": {
@@ -910,8 +910,8 @@
                                       }
                                     },
                                     "range": [
-                                      421,
-                                      426
+                                      419,
+                                      424
                                     ],
                                     "loc": {
                                       "start": {
@@ -930,8 +930,8 @@
                                       "type": "Identifier",
                                       "name": "copy",
                                       "range": [
-                                        429,
-                                        433
+                                        427,
+                                        431
                                       ],
                                       "loc": {
                                         "start": {
@@ -952,8 +952,8 @@
                                           "type": "Identifier",
                                           "name": "p",
                                           "range": [
-                                            435,
-                                            436
+                                            433,
+                                            434
                                           ],
                                           "loc": {
                                             "start": {
@@ -970,8 +970,8 @@
                                           "type": "Identifier",
                                           "name": "pi",
                                           "range": [
-                                            437,
-                                            439
+                                            435,
+                                            437
                                           ],
                                           "loc": {
                                             "start": {
@@ -985,8 +985,8 @@
                                           }
                                         },
                                         "range": [
-                                          435,
-                                          440
+                                          433,
+                                          438
                                         ],
                                         "loc": {
                                           "start": {
@@ -1001,8 +1001,8 @@
                                       }
                                     ],
                                     "range": [
-                                      429,
-                                      442
+                                      427,
+                                      440
                                     ],
                                     "loc": {
                                       "start": {
@@ -1016,8 +1016,8 @@
                                     }
                                   },
                                   "range": [
-                                    421,
-                                    442
+                                    419,
+                                    440
                                   ],
                                   "loc": {
                                     "start": {
@@ -1031,8 +1031,8 @@
                                   }
                                 },
                                 "range": [
-                                  421,
-                                  444
+                                  419,
+                                  442
                                 ],
                                 "loc": {
                                   "start": {
@@ -1047,8 +1047,8 @@
                               }
                             ],
                             "range": [
-                              415,
-                              449
+                              413,
+                              447
                             ],
                             "loc": {
                               "start": {
@@ -1062,8 +1062,8 @@
                             }
                           },
                           "range": [
-                            383,
-                            449
+                            381,
+                            447
                           ],
                           "loc": {
                             "start": {
@@ -1078,8 +1078,8 @@
                         }
                       ],
                       "range": [
-                        293,
-                        453
+                        291,
+                        451
                       ],
                       "loc": {
                         "start": {
@@ -1095,8 +1095,8 @@
                     "generator": false,
                     "expression": false,
                     "range": [
-                      240,
-                      453
+                      238,
+                      451
                     ],
                     "loc": {
                       "start": {
@@ -1110,8 +1110,8 @@
                     }
                   },
                   "range": [
-                    233,
-                    453
+                    231,
+                    451
                   ],
                   "loc": {
                     "start": {
@@ -1127,8 +1127,8 @@
               ],
               "kind": "const",
               "range": [
-                227,
-                455
+                225,
+                453
               ],
               "loc": {
                 "start": {
@@ -1147,8 +1147,8 @@
                 "type": "Identifier",
                 "name": "ladd",
                 "range": [
-                  465,
-                  469
+                  463,
+                  467
                 ],
                 "loc": {
                   "start": {
@@ -1162,8 +1162,8 @@
                 }
               },
               "range": [
-                458,
-                471
+                456,
+                469
               ],
               "loc": {
                 "start": {
@@ -1178,8 +1178,8 @@
             }
           ],
           "range": [
-            223,
-            474
+            221,
+            472
           ],
           "loc": {
             "start": {
@@ -1195,8 +1195,8 @@
         "generator": false,
         "expression": false,
         "range": [
-          189,
-          474
+          187,
+          472
         ],
         "loc": {
           "start": {
@@ -1211,10 +1211,10 @@
         "leadingComments": [
           {
             "type": "Block",
-            "value": "*\n * little endian\n * hypothesis : rj - ri >= pj - pi >= qj - pi\n * @param {number add} nadd number type addition function\n * @param {function} copy number type copy function\n ",
+            "value": "*\n * little endian\n * hypothesis : rj - ri >= pj - pi >= qj - pi\n * @param {function} nadd number type addition function\n * @param {function} copy number type copy function\n ",
             "range": [
               1,
-              181
+              179
             ],
             "loc": {
               "start": {
@@ -1233,8 +1233,8 @@
       "specifiers": [],
       "source": null,
       "range": [
-        182,
-        474
+        180,
+        472
       ],
       "loc": {
         "start": {
@@ -1249,10 +1249,10 @@
       "leadingComments": [
         {
           "type": "Block",
-          "value": "*\n * little endian\n * hypothesis : rj - ri >= pj - pi >= qj - pi\n * @param {number add} nadd number type addition function\n * @param {function} copy number type copy function\n ",
+          "value": "*\n * little endian\n * hypothesis : rj - ri >= pj - pi >= qj - pi\n * @param {function} nadd number type addition function\n * @param {function} copy number type copy function\n ",
           "range": [
             1,
-            181
+            179
           ],
           "loc": {
             "start": {
@@ -1270,8 +1270,8 @@
     {
       "type": "EmptyStatement",
       "range": [
-        475,
-        476
+        473,
+        474
       ],
       "loc": {
         "start": {
@@ -1287,8 +1287,8 @@
   ],
   "sourceType": "module",
   "range": [
-    182,
-    476
+    180,
+    474
   ],
   "loc": {
     "start": {
@@ -1303,10 +1303,10 @@
   "comments": [
     {
       "type": "Block",
-      "value": "*\n * little endian\n * hypothesis : rj - ri >= pj - pi >= qj - pi\n * @param {number add} nadd number type addition function\n * @param {function} copy number type copy function\n ",
+      "value": "*\n * little endian\n * hypothesis : rj - ri >= pj - pi >= qj - pi\n * @param {function} nadd number type addition function\n * @param {function} copy number type copy function\n ",
       "range": [
         1,
-        181
+        179
       ],
       "loc": {
         "start": {

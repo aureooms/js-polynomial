@@ -9,8 +9,8 @@
     "longname": "src/add/badd.js",
     "access": null,
     "description": null,
-    "lineNumber": 7,
-    "content": "\n/**\n* big endian\n* hypothesis : rj - ri >= pj - pi >= qj - pi\n* @param {number add} nadd number type addition function\n*/\nexport function __badd__ ( nadd , copy ) {\n\n\tconst badd = function ( p , pi , pj , q , qi , qj , r , ri , rj ) {\n\n\t\twhile ( qj > qi ) {\n\n\t\t\t--qj;\n\t\t\t--pj;\n\t\t\t--rj;\n\n\t\t\tr[rj] = nadd( p[pj] , q[qj] ) ;\n\n\t\t}\n\n\t\twhile ( pj > pi ) {\n\n\t\t\t--pj;\n\t\t\t--rj;\n\n\t\t\tr[rj] = copy( p[pj] ) ;\n\n\t\t}\n\n\t} ;\n\n\treturn badd ;\n\n}\n"
+    "lineNumber": 8,
+    "content": "\n/**\n * big endian\n * hypothesis : rj - ri >= pj - pi >= qj - pi\n * @param {function} nadd number type addition function\n * @param {function} copy number type copy function\n */\nexport function __badd__ ( nadd , copy ) {\n\n\tconst badd = function ( p , pi , pj , q , qi , qj , r , ri , rj ) {\n\n\t\twhile ( qj > qi ) {\n\n\t\t\t--qj;\n\t\t\t--pj;\n\t\t\t--rj;\n\n\t\t\tr[rj] = nadd( p[pj] , q[qj] ) ;\n\n\t\t}\n\n\t\twhile ( pj > pi ) {\n\n\t\t\t--pj;\n\t\t\t--rj;\n\n\t\t\tr[rj] = copy( p[pj] ) ;\n\n\t\t}\n\n\t} ;\n\n\treturn badd ;\n\n}\n"
   },
   {
     "__docId__": 1,
@@ -25,17 +25,27 @@
     "importPath": "aureooms-js-polynomial/src/add/badd.js",
     "importStyle": "{__badd__}",
     "description": "big endian\nhypothesis : rj - ri >= pj - pi >= qj - pi",
-    "lineNumber": 7,
+    "lineNumber": 8,
     "params": [
       {
         "nullable": null,
         "types": [
-          "number add"
+          "function"
         ],
         "spread": false,
         "optional": false,
         "name": "nadd",
         "description": "number type addition function"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "copy",
+        "description": "number type copy function"
       }
     ],
     "return": {
@@ -161,7 +171,7 @@
     "access": null,
     "description": null,
     "lineNumber": 8,
-    "content": "\n/**\n * little endian\n * hypothesis : rj - ri >= pj - pi >= qj - pi\n * @param {number add} nadd number type addition function\n * @param {function} copy number type copy function\n */\nexport function __ladd__ ( nadd , copy ) {\n\n\tconst ladd = function ( p , pi , pj , q , qi , qj , r , ri , rj ) {\n\n\t\tfor ( ; qi < qj ; ++qi , ++pi , ++ri ) {\n\n\t\t\tr[ri] = nadd( p[pi] , q[qi] ) ;\n\n\t\t}\n\n\t\tfor ( ; pi < pj ; ++pi , ++ri ) {\n\n\t\t\tr[ri] = copy( p[pi] ) ;\n\n\t\t}\n\n\t} ;\n\n\treturn ladd ;\n\n} ;\n"
+    "content": "\n/**\n * little endian\n * hypothesis : rj - ri >= pj - pi >= qj - pi\n * @param {function} nadd number type addition function\n * @param {function} copy number type copy function\n */\nexport function __ladd__ ( nadd , copy ) {\n\n\tconst ladd = function ( p , pi , pj , q , qi , qj , r , ri , rj ) {\n\n\t\tfor ( ; qi < qj ; ++qi , ++pi , ++ri ) {\n\n\t\t\tr[ri] = nadd( p[pi] , q[qi] ) ;\n\n\t\t}\n\n\t\tfor ( ; pi < pj ; ++pi , ++ri ) {\n\n\t\t\tr[ri] = copy( p[pi] ) ;\n\n\t\t}\n\n\t} ;\n\n\treturn ladd ;\n\n} ;\n"
   },
   {
     "__docId__": 8,
@@ -181,7 +191,7 @@
       {
         "nullable": null,
         "types": [
-          "number add"
+          "function"
         ],
         "spread": false,
         "optional": false,
@@ -498,7 +508,7 @@
     "access": null,
     "description": null,
     "lineNumber": 10,
-    "content": "\n\n/**\n * little endian\n * hypothesis : rj - ri >= m + n - 1\n * @param  {number iadd} niadd number type in-place addition function\n * @param  {number mul} niadd number type multiplication function\n */\n\nexport function __mul__ ( niadd , nmul ) {\n\n\tconst mul = function ( p , pi , pj , q , qi , qj , r , ri , rj ) {\n\n\t\tvar i , j , k , m , n ;\n\n\t\tfor ( i = 0 , m = pj - pi  ; i < m  ; ++i ) {\n\n\t\t\tfor ( j = 0 , n = qj - qi  ; j < n  ; ++j ) {\n\n\t\t\t\tk = ri + i + j ;\n\n\t\t\t\tr[k] = niadd( r[k] , nmul( p[pi + i] , q[qi + j] ) ) ;\n\n\t\t\t}\n\n\t\t}\n\n\t} ;\n\n\treturn mul ;\n\n}\n"
+    "content": "\n\n/**\n * little endian\n * hypothesis : rj - ri >= m + n - 1\n * @param {function} niadd number type in-place addition function\n * @param {function} nmul number type multiplication function\n */\n\nexport function __mul__ ( niadd , nmul ) {\n\n\tconst mul = function ( p , pi , pj , q , qi , qj , r , ri , rj ) {\n\n\t\tvar i , j , k , m , n ;\n\n\t\tfor ( i = 0 , m = pj - pi  ; i < m  ; ++i ) {\n\n\t\t\tfor ( j = 0 , n = qj - qi  ; j < n  ; ++j ) {\n\n\t\t\t\tk = ri + i + j ;\n\n\t\t\t\tr[k] = niadd( r[k] , nmul( p[pi + i] , q[qi + j] ) ) ;\n\n\t\t\t}\n\n\t\t}\n\n\t} ;\n\n\treturn mul ;\n\n}\n"
   },
   {
     "__docId__": 20,
@@ -518,7 +528,7 @@
       {
         "nullable": null,
         "types": [
-          "number iadd"
+          "function"
         ],
         "spread": false,
         "optional": false,
@@ -528,11 +538,11 @@
       {
         "nullable": null,
         "types": [
-          "number mul"
+          "function"
         ],
         "spread": false,
         "optional": false,
-        "name": "niadd",
+        "name": "nmul",
         "description": "number type multiplication function"
       }
     ],
