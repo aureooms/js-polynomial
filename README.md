@@ -3,7 +3,7 @@
 
 Sparse and dense polynomials for JavaScript.
 
-[![NPM license](https://img.shields.io/npm/l/@aureooms/js-polynomial.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-polynomial/master/LICENSE)
+[![License](https://img.shields.io/github/license/aureooms/js-polynomial.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-polynomial/master/LICENSE)
 [![NPM version](https://img.shields.io/npm/v/@aureooms/js-polynomial.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-polynomial)
 [![Build Status](https://img.shields.io/travis/aureooms/js-polynomial.svg?style=flat)](https://travis-ci.org/aureooms/js-polynomial)
 [![Coverage Status](https://img.shields.io/coveralls/aureooms/js-polynomial.svg?style=flat)](https://coveralls.io/r/aureooms/js-polynomial)
