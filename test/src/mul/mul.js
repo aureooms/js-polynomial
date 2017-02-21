@@ -1,6 +1,6 @@
 import test from 'ava' ;
 
-import array from "@aureooms/js-array" ;
+import * as array from "@aureooms/js-array" ;
 import * as number from "@aureooms/js-number" ;
 import { partial } from "@aureooms/js-functools" ;
 import { exhaust , starmap } from "@aureooms/js-itertools" ;
