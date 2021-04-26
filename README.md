@@ -1,4 +1,4 @@
-[js-polynomial](http://aureooms.github.io/js-polynomial)
+[js-polynomial](http://make-github-pseudonymous-again.github.io/js-polynomial)
 ==
 
 Sparse and dense polynomials for JavaScript.
@@ -12,7 +12,7 @@ Sparse and dense polynomials for JavaScript.
 [![Code Climate](https://img.shields.io/codeclimate/github/aureooms/js-polynomial.svg?style=flat)](https://codeclimate.com/github/aureooms/js-polynomial)
 [![NPM downloads per month](https://img.shields.io/npm/dm/@aureooms/js-polynomial.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-polynomial)
 [![GitHub issues](https://img.shields.io/github/issues/aureooms/js-polynomial.svg?style=flat)](https://github.com/aureooms/js-polynomial/issues)
-[![Documentation](https://aureooms.github.io/js-polynomial/badge.svg)](https://aureooms.github.io/js-polynomial/source.html)
+[![Documentation](https://make-github-pseudonymous-again.github.io/js-polynomial/badge.svg)](https://make-github-pseudonymous-again.github.io/js-polynomial/source.html)
 
 ## References
 
